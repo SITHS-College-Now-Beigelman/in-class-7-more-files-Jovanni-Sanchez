@@ -15,34 +15,30 @@ Determine the average or each player and print out the corresponding statement. 
 
 int main()
 {
-    ifstream inputFile;
-    int currentPlayer = 1;
+     ifstream inputFile;
+     int currentPlayer = 1;
 
-    inputFile.open("game_scores.txt");
+     inputFile.open("game_scores.txt");
 
-    while (!inputFile.eof())
-    {
-        double temp1stScore;
-        double temp2ndScore;
-        double temp3rdScore;
-        double tempScoreAverage;
-        string xboxLiveGamertag;
+     while (!inputFile.eof())
+     {
+          double temp1stScore;
+          double temp2ndScore;
+          double temp3rdScore;
+          double tempScoreAverage;
+          string xboxLiveGamertag;
 
-        inputFile >> xboxLiveGamertag >> temp1stScore >> temp2ndScore >> temp3rdScore;
+          inputFile >> xboxLiveGamertag >> temp1stScore >> temp2ndScore >> temp3rdScore;
 
-        tempScoreAverage = (temp1stScore + temp2ndScore + temp3rdScore) / 3;
+          tempScoreAverage = ((temp1stScore * 0.5) + (temp2ndScore * 0.3) + (temp3rdScore * 0.5)) / 3;
 
-        cout << "Player " << currentPlayer << " - "
-             << '"' << xboxLiveGamertag << '"' << ":\n";
+          cout << "Player " << currentPlayer << " - "
+               << '"' << xboxLiveGamertag << '"' << ":\n";
 
-        cout << xboxLiveGamertag << "'s average score is "
-             << (temp1stScore + temp2ndScore + temp3rdScore) / 3
-             << ".\n";
+          cout << xboxLiveGamertag << "'s average score is "
+               << tempScoreAverage
+               << ".\n\n";
 
-        cout << "Score 1 = " << (temp1stScore / tempScoreAverage) << " / "
-             << "Score 2 = " << (temp2ndScore / tempScoreAverage) << " / "
-             << "Score 3 = " << (temp3rdScore / tempScoreAverage) << "\n\n";
-
-        currentPlayer++;
-    }
+          currentPlayer++;
+     }
 }
