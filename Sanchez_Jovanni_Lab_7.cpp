@@ -33,8 +33,8 @@ int main()
           of the input file */
           inputFile >> xboxLiveGamertag >> player1stScore >> player2ndScore >> player3rdScore;
 
-          /* The 1st score is 20%, the 2nd score is 30%, and the 3rd score is 50% of the total.
-          Divide the total by 3 (the number of scores) to get an average. */
+          /* The 1st score is 20%, the 2nd score is 30%, and the 3rd score is 50% of the total
+          score. Divide the total by 3 (the number of scores) to get an average. */
           gameScoreAverage = ((player1stScore * 0.2) + (player2ndScore * 0.3) + (player3rdScore * 0.5)) / 3;
 
           // Print the players number and name
