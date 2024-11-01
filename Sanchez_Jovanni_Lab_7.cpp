@@ -54,7 +54,7 @@ int main()
           {
                cout << "Congrats! You're an Expert!" << "\n";
           }
-          else if (gameScoreAverage > 1800 && gameScoreAverage <= 2000)
+          else if (gameScoreAverage >= 1800 && gameScoreAverage <= 2000)
           {
                cout << "Master - Good Job!" << "\n";
           }
@@ -74,7 +74,7 @@ int main()
           // Prints out the player's name and average
           cout << xboxLiveGamertag << "'s average score is "
                << gameScoreAverage
-               << ".\n";
+               << "\n";
 
           // Prints out the individual scores the player had
           cout << "Score 1 = " << player1stScore << " / "
