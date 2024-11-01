@@ -20,23 +20,48 @@ int main()
 
      inputFile.open("game_scores.txt");
 
-     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
+     for (currentPlayer = 2; currentPlayer <= 5; currentPlayer++)
      {
-          double temp1stScore;
-          double temp2ndScore;
-          double temp3rdScore;
-          double tempScoreAverage;
+          double player1stScore;
+          double player2ndScore;
+          double player3rdScore;
+          double gameScoreAverage;
           string xboxLiveGamertag;
 
-          inputFile >> xboxLiveGamertag >> temp1stScore >> temp2ndScore >> temp3rdScore;
+          inputFile >> xboxLiveGamertag >> player1stScore >> player2ndScore >> player3rdScore;
 
-          tempScoreAverage = ((temp1stScore * 0.5) + (temp2ndScore * 0.3) + (temp3rdScore * 0.5)) / 3;
+          gameScoreAverage = ((player1stScore * 0.5) + (player2ndScore * 0.3) + (player3rdScore * 0.5)) / 3;
 
           cout << "Player " << currentPlayer << " - "
                << '"' << xboxLiveGamertag << '"' << ":\n";
 
+          if (gameScoreAverage > 2000)
+          {
+               cout << "Congrats! You're an Expert!" << "\n";
+          }
+          else if (gameScoreAverage >= 1800 && gameScoreAverage <= 2000)
+          {
+               cout << "Master - Good Job!" << "\n";
+          }
+          else if (gameScoreAverage >= 1500 && gameScoreAverage <= 1800)
+          {
+               cout << "Advanced - Good Job!" << "\n";
+          }
+          else if (gameScoreAverage >= 1000 && gameScoreAverage <= 1500)
+          {
+               cout << "Intermediate." << "\n";
+          }
+          else
+          {
+               cout << "Beginner - Keep Practicing!" << "\n";
+          }
+
           cout << xboxLiveGamertag << "'s average score is "
-               << tempScoreAverage
-               << ".\n\n";
+               << gameScoreAverage
+               << ".\n";
+
+          cout << "Score 1 = " << player1stScore << " / "
+               << "Score 2 = " << player2ndScore << " / "
+               << "Score 3 = " << player3rdScore << "\n\n";
      }
 }
