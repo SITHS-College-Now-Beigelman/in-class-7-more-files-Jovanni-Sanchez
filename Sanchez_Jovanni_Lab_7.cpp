@@ -21,7 +21,7 @@ int main()
      inputFile.open("game_scores.txt"); // Opens the input file
 
      // Start on the 1st player, end on the 3rd player
-     for (currentPlayer = 1; currentPlayer <= 8; currentPlayer++)
+     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
      {
           double player1stScore;   // Assigned to the player's 1st score
           double player2ndScore;   // Assigned to the player's 2nd score
@@ -54,15 +54,15 @@ int main()
           {
                cout << "Congrats! You're an Expert!" << "\n";
           }
-          else if (gameScoreAverage >= 1800 && gameScoreAverage <= 2000)
+          else if (gameScoreAverage > 1800 && gameScoreAverage <= 2000)
           {
                cout << "Master - Good Job!" << "\n";
           }
-          else if (gameScoreAverage >= 1500 && gameScoreAverage <= 1799)
+          else if (gameScoreAverage >= 1500 && gameScoreAverage <= 1800)
           {
                cout << "Advanced - Good Job!" << "\n";
           }
-          else if (gameScoreAverage >= 1000 && gameScoreAverage <= 1499)
+          else if (gameScoreAverage >= 1000 && gameScoreAverage <= 1500)
           {
                cout << "Intermediate." << "\n";
           }
