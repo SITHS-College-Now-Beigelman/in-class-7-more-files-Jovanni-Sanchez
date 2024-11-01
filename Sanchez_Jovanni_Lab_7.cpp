@@ -21,7 +21,7 @@ int main()
      inputFile.open("game_scores.txt"); // Opens the input file
 
      // Start on the 1st player, end on the 3rd player
-     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
+     for (currentPlayer = 1; currentPlayer <= 8; currentPlayer++)
      {
           double player1stScore;   // Assigned to the player's 1st score
           double player2ndScore;   // Assigned to the player's 2nd score
