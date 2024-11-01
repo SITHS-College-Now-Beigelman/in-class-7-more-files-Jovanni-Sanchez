@@ -15,12 +15,12 @@ Determine the average or each player and print out the corresponding statement. 
 
 int main()
 {
+     int currentPlayer;
      ifstream inputFile;
-     int currentPlayer = 1;
 
      inputFile.open("game_scores.txt");
 
-     while (!inputFile.eof())
+     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
      {
           double temp1stScore;
           double temp2ndScore;
@@ -38,7 +38,5 @@ int main()
           cout << xboxLiveGamertag << "'s average score is "
                << tempScoreAverage
                << ".\n\n";
-
-          currentPlayer++;
      }
 }
