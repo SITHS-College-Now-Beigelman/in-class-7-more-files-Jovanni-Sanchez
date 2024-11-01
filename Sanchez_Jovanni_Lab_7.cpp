@@ -20,7 +20,7 @@ int main()
 
      inputFile.open("game_scores.txt");
 
-     for (currentPlayer = 2; currentPlayer <= 5; currentPlayer++)
+     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
      {
           double player1stScore;
           double player2ndScore;
