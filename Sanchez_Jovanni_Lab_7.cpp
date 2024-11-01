@@ -20,7 +20,7 @@ int main()
 
      inputFile.open("game_scores.txt");
 
-     for (currentPlayer = 1; currentPlayer <= 3; currentPlayer++)
+     for (currentPlayer = 1; currentPlayer <= 8; currentPlayer++)
      {
           double player1stScore;
           double player2ndScore;
@@ -30,7 +30,7 @@ int main()
 
           inputFile >> xboxLiveGamertag >> player1stScore >> player2ndScore >> player3rdScore;
 
-          gameScoreAverage = ((player1stScore * 0.5) + (player2ndScore * 0.3) + (player3rdScore * 0.5)) / 3;
+          gameScoreAverage = ((player1stScore * 0.2) + (player2ndScore * 0.3) + (player3rdScore * 0.5)) / 3;
 
           cout << "Player " << currentPlayer << " - "
                << '"' << xboxLiveGamertag << '"' << ":\n";
